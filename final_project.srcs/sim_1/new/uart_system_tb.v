@@ -21,63 +21,56 @@
 
 
 module uart_system_tb;
-    reg clk_100mhz;             // 100 MHz clock
-    reg reset;                  // Reset signal
-    reg [7:0] tx_data;          // Data to transmit
-    reg tx_start;               // Start transmission
-    reg rx_in;                  // Serial input for RX
-    wire tx_out;                // Serial output from TX
-    wire [7:0] rx_data;         // Received data
-    wire rx_ready;              // Data ready signal
+    reg clk;
+    reg reset;
+    reg [7:0] tx_data;
+    reg tx_start;
+    wire tx_busy;
+    wire tx_out;
 
-    // Instantiate the UART system
-    uart_system uut (
-        .clk_100mhz(clk_100mhz),
+    reg rx_in;
+    wire [7:0] rx_data;
+    wire rx_ready;
+
+    // Instantiate TX and RX
+    uart_tx_utf8 tx_inst (
+        .clk(clk),
         .reset(reset),
         .tx_data(tx_data),
         .tx_start(tx_start),
-        .rx_in(rx_in),
-        .tx_out(tx_out),
+        .tx_busy(tx_busy),
+        .tx_out(tx_out)
+    );
+
+    uart_rx_utf8 rx_inst (
+        .clk(clk),
+        .reset(reset),
+        .rx_in(tx_out),
         .rx_data(rx_data),
         .rx_ready(rx_ready)
     );
 
-    // Clock generation (100 MHz)
-    always #5 clk_100mhz = ~clk_100mhz;
+    // Generate Clock
+    always #5 clk = ~clk;
 
     initial begin
-        // Initialize inputs
-        clk_100mhz = 0;
+        // Initialize
+        clk = 0;
         reset = 1;
-        tx_data = 8'b0;
-        tx_start = 1;
-        #10 tx_start = 0;
-        rx_in = 1;              // Idle state for UART
+        tx_data = 8'h00;
+        tx_start = 0;
+        #20;
+        reset = 0;
 
-        // Reset the system
-        #20 reset = 0;
+        // Send Thai character "ก" (UTF-8: E0 B8 81)
+        #10 tx_data = 8'hE0; tx_start = 1; #10 tx_start = 0;
+        wait (!tx_busy);  // Wait for previous byte to finish
+        #10 tx_data = 8'hB8; tx_start = 1; #10 tx_start = 0;
+        wait (!tx_busy);
+        #10 tx_data = 8'h81; tx_start = 1; #10 tx_start = 0;
 
-        // Transmit a byte (0xA5)
-        #40 tx_data = 8'hA5;
-        tx_start = 1;
-        #10 tx_start = 0;
-
-        // Simulate RX receiving the same byte
-        #100000 rx_in = 0;      // Start bit
-        #104160 rx_in = 1;      // Bit 0
-        #104160 rx_in = 0;      // Bit 1
-        #104160 rx_in = 1;      // Bit 2
-        #104160 rx_in = 0;      // Bit 3
-        #104160 rx_in = 1;      // Bit 4
-        #104160 rx_in = 0;      // Bit 5
-        #104160 rx_in = 1;      // Bit 6
-        #104160 rx_in = 0;      // Bit 7
-        #104160 rx_in = 1;      // Stop bit
-        #104160 rx_in = 1;      // Idle state
-
-        // Wait for RX to process
-        #200000;
-
-        $stop; // End simulation
+        // Wait for reception to complete
+        #1000;
+        $stop;
     end
 endmodule

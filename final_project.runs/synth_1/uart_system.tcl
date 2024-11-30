@@ -75,6 +75,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/clk_divider.v
+  C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/dFilpflop.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/divClock.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/quadSevenSeg.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/siekoo_rom.v
