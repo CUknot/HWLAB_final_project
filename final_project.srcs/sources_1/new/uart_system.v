@@ -29,11 +29,12 @@ module uart_system (
     //output wire rx_ready          
     output [6:0] seg,      
     output dp,             
-    output [3:0]an 
+    output [3:0]an
 );
     wire clk_uart; // Baud rate clock (9600 Hz)
-    wire clkDiv;               
-    wire [7:0] rx_data;
+    wire clkDiv;
+    wire [23:0] utf8_data; 
+    wire tx_busy;        
     wire [0:6] num0;
     wire tx_start;
     wire rx_ready;
@@ -62,9 +63,9 @@ module uart_system (
     uart_tx tx_inst (
         .clk(clk_uart),
         .reset(reset),
-        .tx_data(rx_data),
+        .tx_data(utf8_data),
         .tx_start(rx_ready_singlepulser),
-        .tx_busy(),               
+        .tx_busy(tx_busy),               
         .tx_out(RsTx)
     );
 
@@ -73,23 +74,10 @@ module uart_system (
         .clk(clk_uart),
         .reset(reset),
         .rx_in(RsRx),
-        .rx_data(rx_data),
+        .rx_data(utf8_data),
         .rx_ready(rx_ready)
     );
     
-    siekoo_rom siekoo_rom_inst(rx_data, num0);
-    
-    quadSevenSeg display (
-        .seg(seg),
-        .dp(dp),
-        .an(an),
-        .num0(~num0),  // Right-most character
-        .num1(8'hFF),
-        .num2(8'hFF),
-        .num3(8'hFF),  // Left-most character
-        .clk(clkDiv)    
-    );
     
     //always @(posedge clk_uart) RsTx = RsRx;
 endmodule
-

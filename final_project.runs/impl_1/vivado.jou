@@ -3,22 +3,22 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Nov 30 00:36:11 2024
-# Process ID: 8956
-# Current directory: C:/Users/User/Vivado/final_project/final_project.runs/impl_1
+# Start of session at: Sun Dec  1 16:27:58 2024
+# Process ID: 13268
+# Current directory: C:/Users/User/Desktop/HWLAB_final_project/final_project.runs/impl_1
 # Command line: vivado.exe -log uart_system.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_system.tcl -notrace
-# Log file: C:/Users/User/Vivado/final_project/final_project.runs/impl_1/uart_system.vdi
-# Journal file: C:/Users/User/Vivado/final_project/final_project.runs/impl_1\vivado.jou
-# Running On        :kittipat
+# Log file: C:/Users/User/Desktop/HWLAB_final_project/final_project.runs/impl_1/uart_system.vdi
+# Journal file: C:/Users/User/Desktop/HWLAB_final_project/final_project.runs/impl_1\vivado.jou
+# Running On        :Macbook-SE-M16-Pepper
 # Platform          :Windows Server 2016 or Windows 10
-# Operating System  :22631
-# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-# CPU Frequency     :2304 MHz
-# CPU Physical cores:8
-# CPU Logical cores :16
-# Host memory       :16931 MB
-# Swap memory       :4563 MB
-# Total Virtual     :21495 MB
-# Available Virtual :7064 MB
+# Operating System  :26100
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency     :2419 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :16779 MB
+# Swap memory       :10200 MB
+# Total Virtual     :26980 MB
+# Available Virtual :4245 MB
 #-----------------------------------------------------------
 source uart_system.tcl -notrace

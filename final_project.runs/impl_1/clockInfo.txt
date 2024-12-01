@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Sat Nov 30 00:36:35 2024
-| Host         : kittipat
+| Date         : Sun Dec  1 16:27:21 2024
+| Host         : Macbook-SE-M16-Pepper
 | Design       : design_1
 | Device       : xc7a35t-cpg236-1--
 -------------------------------------
