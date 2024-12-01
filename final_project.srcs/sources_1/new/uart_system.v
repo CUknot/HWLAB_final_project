@@ -37,7 +37,7 @@ module uart_system (
     wire clkDiv;               
     wire [7:0] rx_data;
     reg [7:0] tx_data;
-    wire [6:0] num0;
+    wire [6:0] num0, num2, num3;
     reg tx_start;
     wire rx_ready;
     wire rx_ready_singlepulser;
@@ -102,14 +102,24 @@ module uart_system (
     
     siekoo_rom siekoo_rom_inst(tx_data, num0);
     
+    hexTo7Segment hexTo7Segment_inst(
+        .segments(num2),
+        .hex(tx_data[3:0])
+    );
+    
+    hexTo7Segment hexTo7Segment_inst1(
+        .segments(num3),
+        .hex(tx_data[7:4])
+    );
+    
     quadSevenSeg display (
         .seg(seg),
         .dp(dp),
         .an(an),
         .num0(~num0),  // Right-most character
         .num1(8'hFF),
-        .num2(8'hFF),
-        .num3(8'hFF),  // Left-most character
+        .num2(num2),
+        .num3(num3),  // Left-most character
         .clk(clkDiv)    
     );
     

@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/29/2024 11:05:15 PM
+// Create Date: 09/16/2024 09:15:10 PM
 // Design Name: 
 // Module Name: hexTo7Segment
 // Project Name: 
@@ -21,15 +21,22 @@
 
 
 module hexTo7Segment(
-    output [6:0] segments,
+    output reg [6:0] segments,
     input [3:0] hex
     );
     
-    reg [6:0] segments;
-    
-    always @(hex)
+// 7-segment encoding
+//      0
+//     ---
+//  5 |   | 1
+//     --- <--6
+//  4 |   | 2
+//     ---
+//      3
+
+   always @(hex)
       case (hex)
-          4'b0001 : segments = 7'b1111001;   // 1
+             4'b0001 : segments = 7'b1111001;   // 1
           4'b0010 : segments = 7'b0100100;   // 2
           4'b0011 : segments = 7'b0110000;   // 3
           4'b0100 : segments = 7'b0011001;   // 4
@@ -46,4 +53,5 @@ module hexTo7Segment(
           4'b1111 : segments = 7'b0001110;   // F
           default : segments = 7'b1000000;   // 0
       endcase
+				
 endmodule
