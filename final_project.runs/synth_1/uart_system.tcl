@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -78,7 +79,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/divClock.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/hexTo7Segment.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/quadSevenSeg.v
-  C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/siekoo_rom.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/single_pulse.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v
   C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_tx.v

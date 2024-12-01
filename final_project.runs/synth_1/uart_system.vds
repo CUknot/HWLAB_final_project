@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Dec  1 14:44:47 2024
-# Process ID: 27144
+# Start of session at: Sun Dec  1 23:05:12 2024
+# Process ID: 21816
 # Current directory: C:/Users/User/Vivado/final_project/final_project.runs/synth_1
 # Command line: vivado.exe -log uart_system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_system.tcl
 # Log file: C:/Users/User/Vivado/final_project/final_project.runs/synth_1/uart_system.vds
@@ -19,10 +19,10 @@
 # Host memory       :16931 MB
 # Swap memory       :4563 MB
 # Total Virtual     :21495 MB
-# Available Virtual :9320 MB
+# Available Virtual :6308 MB
 #-----------------------------------------------------------
 source uart_system.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 551.918 ; gain = 223.707
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 555.320 ; gain = 223.684
 Command: read_checkpoint -auto_incremental -incremental C:/Users/User/Vivado/final_project/final_project.srcs/utils_1/imports/synth_1/uart_system.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/User/Vivado/final_project/final_project.srcs/utils_1/imports/synth_1/uart_system.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -36,11 +36,15 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8428
+INFO: [Synth 8-7075] Helper process launched with PID 29072
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1405.938 ; gain = 448.734
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1406.070 ; gain = 449.809
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'reset', assumed default net type 'wire' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:72]
+CRITICAL WARNING: [Synth 8-9339] data object 'num0' is already declared [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:42]
+INFO: [Synth 8-6826] previous declaration of 'num0' is from here [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:39]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'num0' is ignored [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:42]
+INFO: [Synth 8-11241] undeclared symbol 'reset', assumed default net type 'wire' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:68]
+INFO: [Synth 8-11241] undeclared symbol 'rx_ready_singlepulser', assumed default net type 'wire' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:70]
 INFO: [Synth 8-6157] synthesizing module 'uart_system' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:23]
 INFO: [Synth 8-6157] synthesizing module 'dFlipflop' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/dFilpflop.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'dFlipflop' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/dFilpflop.v:23]
@@ -53,9 +57,8 @@ INFO: [Synth 8-6155] done synthesizing module 'single_pulse' (0#1) [C:/Users/Use
 INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_tx.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_tx.v:1]
 INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v:1]
+WARNING: [Synth 8-6090] variable 'utf8_byte_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v:72]
 INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v:1]
-INFO: [Synth 8-6157] synthesizing module 'siekoo_rom' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/siekoo_rom.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'siekoo_rom' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/siekoo_rom.v:23]
 INFO: [Synth 8-6157] synthesizing module 'hexTo7Segment' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/hexTo7Segment.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'hexTo7Segment' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/hexTo7Segment.v:23]
 INFO: [Synth 8-6157] synthesizing module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/quadSevenSeg.v:23]
@@ -64,29 +67,30 @@ WARNING: [Synth 8-567] referenced signal 'num1' should be on the sensitivity lis
 WARNING: [Synth 8-567] referenced signal 'num2' should be on the sensitivity list [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/quadSevenSeg.v:60]
 WARNING: [Synth 8-567] referenced signal 'num3' should be on the sensitivity list [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/quadSevenSeg.v:60]
 INFO: [Synth 8-6155] done synthesizing module 'quadSevenSeg' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/quadSevenSeg.v:23]
-WARNING: [Synth 8-689] width (7) of port connection 'num0' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:119]
-WARNING: [Synth 8-689] width (7) of port connection 'num2' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:121]
-WARNING: [Synth 8-689] width (7) of port connection 'num3' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:122]
+WARNING: [Synth 8-689] width (7) of port connection 'num0' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:125]
+WARNING: [Synth 8-689] width (7) of port connection 'num1' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:126]
+WARNING: [Synth 8-689] width (7) of port connection 'num2' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:127]
+WARNING: [Synth 8-689] width (7) of port connection 'num3' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:128]
 INFO: [Synth 8-6155] done synthesizing module 'uart_system' (0#1) [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:23]
-WARNING: [Synth 8-7137] Register rx_data_reg in module uart_rx has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v:28]
-WARNING: [Synth 8-3848] Net reset in module/entity uart_system does not have driver. [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:72]
+WARNING: [Synth 8-7137] Register rx_data_reg in module uart_rx has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v:39]
+WARNING: [Synth 8-3848] Net reset in module/entity uart_system does not have driver. [C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v:68]
 WARNING: [Synth 8-7129] Port num0[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num1[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num2[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num3[7] in module quadSevenSeg is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1515.965 ; gain = 558.762
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1518.711 ; gain = 562.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1515.965 ; gain = 558.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1518.711 ; gain = 562.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1515.965 ; gain = 558.762
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1518.711 ; gain = 562.449
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1515.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1518.711 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -97,31 +101,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/uart_system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1589.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1623.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1589.762 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1623.309 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -131,23 +135,27 @@ Detailed RTL Component Info :
 	   2 Input   18 Bit       Adders := 1     
 	   2 Input   14 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 3     
 +---Registers : 
+	               24 Bit    Registers := 3     
 	               18 Bit    Registers := 1     
 	               14 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 27    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 28    
 +---Muxes : 
-	   2 Input   10 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 7     
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 4     
 	   4 Input    7 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 4     
 	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 9     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 29    
+	   3 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -166,40 +174,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3917] design uart_system has port dp driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1589.762 ; gain = 632.559
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+------------+---------------------+---------------+----------------+
-|Module Name | RTL Object          | Depth x Width | Implemented As | 
-+------------+---------------------+---------------+----------------+
-|siekoo_rom  | seg                 | 128x7         | LUT            | 
-|uart_system | siekoo_rom_inst/seg | 128x7         | LUT            | 
-+------------+---------------------+---------------+----------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -217,37 +210,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -266,39 +259,40 @@ Report Cell Usage:
 |1     |BUFG   |     2|
 |2     |CARRY4 |     9|
 |3     |LUT1   |     3|
-|4     |LUT2   |    25|
-|5     |LUT3   |    12|
-|6     |LUT4   |    14|
-|7     |LUT5   |    32|
-|8     |LUT6   |    32|
-|9     |MUXF7  |     6|
+|4     |LUT2   |    30|
+|5     |LUT3   |    25|
+|6     |LUT4   |    20|
+|7     |LUT5   |    45|
+|8     |LUT6   |    52|
+|9     |MUXF7  |     2|
 |10    |FDCE   |    34|
-|11    |FDRE   |    68|
+|11    |FDRE   |   129|
 |12    |IBUF   |    12|
 |13    |OBUF   |    13|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1589.762 ; gain = 558.762
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1589.762 ; gain = 632.559
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1623.309 ; gain = 562.449
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1623.309 ; gain = 667.047
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1589.762 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1623.309 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1589.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1623.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 49c39c49
+Synth Design complete | Checksum: d3eb4dca
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 17 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1589.762 ; gain = 1033.504
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1589.762 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1623.309 ; gain = 1063.336
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1623.309 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Vivado/final_project/final_project.runs/synth_1/uart_system.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file uart_system_utilization_synth.rpt -pb uart_system_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 14:45:24 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 23:05:49 2024...

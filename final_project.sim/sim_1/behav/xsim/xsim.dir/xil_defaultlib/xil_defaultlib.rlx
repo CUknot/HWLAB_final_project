@@ -4,6 +4,7 @@ May 22 2024
 19:03:11
 C:/Users/User/Vivado/final_project/final_project.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
 C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/clk_divider_tb.v,1732893661,verilog,,,,clk_divider_tb,,,,,,,,
+C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/tb_vga_controller.v,1733045320,verilog,,,,tb_vga_controller,,,,,,,,
 C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/uart_rx_tb.v,1732892524,verilog,,,,uart_rx_tb,,,,,,,,
 C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/uart_system_tb.v,1732886912,verilog,,,,uart_system_tb,,,,,,,,
 C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/uart_tx_tb.v,1732888188,verilog,,,,uart_tx_tb,,,,,,,,
@@ -11,3 +12,4 @@ C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/clk_divider.
 C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_rx.v,1732887621,verilog,,C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/uart_rx_tb.v,,uart_rx,,,,,,,,
 C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_system.v,1732886349,verilog,,C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_tx.v,,uart_system,,,,,,,,
 C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/uart_tx.v,1732900504,verilog,,C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/uart_tx_tb.v,,uart_tx,,,,,,,,
+C:/Users/User/Vivado/final_project/final_project.srcs/sources_1/new/vga_controller.v,1733040972,verilog,,C:/Users/User/Vivado/final_project/final_project.srcs/sim_1/new/tb_vga_controller.v,,vga_controller,,,,,,,,
