@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -75,6 +73,8 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/clk_divider.v
   C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/divClock.v
+  C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/hex.v
+  C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/quadSevenSeg.v
   C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/single_pulse.v
   C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/uart_rx.v
   C:/Users/User/Desktop/HWLAB_final_project/final_project.srcs/sources_1/new/uart_tx.v

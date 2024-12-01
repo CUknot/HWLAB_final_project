@@ -38,7 +38,7 @@ module uart_system (
     wire [0:6] num0;
     wire tx_start;
     wire rx_ready;
-    
+    wire [6:0] num0, num1, num2, num3;
     // Instantiate Clock Divider
     clk_divider clk_div_inst (
         .clk_in(clk),
@@ -76,6 +76,39 @@ module uart_system (
         .rx_in(RsRx),
         .rx_data(utf8_data),
         .rx_ready(rx_ready)
+    );
+    
+    
+    hexTo7Segment hexTo7Segment_inst0(
+        .segments(num0),
+        .hex(utf8_data[3:0])
+    );
+    
+     hexTo7Segment hexTo7Segment_inst1(
+        .segments(num1),
+        .hex(utf8_data[7:4])
+    );
+    
+        hexTo7Segment hexTo7Segment_inst2(
+        .segments(num2),
+        .hex(utf8_data[11:8])
+    );
+    
+        hexTo7Segment hexTo7Segment_inst3(
+        .segments(num3),
+        .hex(utf8_data[15:12])
+    );
+    
+    
+        quadSevenSeg display (
+        .seg(seg),
+        .dp(dp),
+        .an(an),
+        .num0(num0),  // Right-most character
+        .num1(num1),
+        .num2(num2),
+        .num3(num3),  // Left-most character
+        .clk(clkDiv)    
     );
     
     

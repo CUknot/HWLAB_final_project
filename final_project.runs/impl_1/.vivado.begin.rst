@@ -1,40 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="10308" HostCore="32" HostMemory="016779952128">
+    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="16312" HostCore="32" HostMemory="016779538432">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="18748" HostCore="32" HostMemory="016779952128">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="25688" HostCore="32" HostMemory="016779952128">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="41408" HostCore="32" HostMemory="016779952128">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="39240" HostCore="32" HostMemory="016779952128">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="42488" HostCore="32" HostMemory="016779952128">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="32820" HostCore="32" HostMemory="016779952128">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="20016" HostCore="32" HostMemory="016779952128">
+    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="31100" HostCore="32" HostMemory="016779538432">
     </Process>
 </ProcessHandle>
