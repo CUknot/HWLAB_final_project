@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/imports/VGA Text Generation/ascii_rom.v" \
+"../../../../project_1.srcs/sources_1/imports/VGA Text Generation/ascii_test.v" \
+"../../../../project_1.srcs/sources_1/new/data.v" \
+"../../../../project_1.srcs/sources_1/imports/VGA Text Generation/top.v" \
+"../../../../project_1.srcs/sources_1/imports/VGA Text Generation/vga_controller.v" \
+"../../../../project_1.srcs/sim_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

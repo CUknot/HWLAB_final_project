@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec  2 21:20:19 2024
+# Process ID: 32652
+# Current directory: C:/Users/User/Desktop/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/User/Desktop/project_1/project_1.runs/synth_1/top.vds
+# Journal file: C:/Users/User/Desktop/project_1/project_1.runs/synth_1\vivado.jou
+# Running On        :Macbook-SE-M16-Pepper
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency     :2419 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :16779 MB
+# Swap memory       :10200 MB
+# Total Virtual     :26980 MB
+# Available Virtual :3657 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/User/Desktop/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Users/User/Desktop/project_1/project_1.srcs/sim_1/new/top_tb.v,1733141485,verilog,,,,top_tb,,,,,,,,
+C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/ascii_rom.v,1717040361,verilog,,C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/ascii_test.v,,ascii_rom,,,,,,,,
+C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/ascii_test.v,1733145941,verilog,,C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/new/data.v,,ascii_test,,,,,,,,
+C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/top.v,1733140385,verilog,,C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/vga_controller.v,,top,,,,,,,,
+C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/vga_controller.v,1717040361,verilog,,C:/Users/User/Desktop/project_1/project_1.srcs/sim_1/new/top_tb.v,,vga_controller,,,,,,,,
+C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/new/data.v,1733145546,verilog,,C:/Users/User/Desktop/project_1/project_1.srcs/sources_1/imports/VGA Text Generation/top.v,,rom_memory,,,,,,,,
