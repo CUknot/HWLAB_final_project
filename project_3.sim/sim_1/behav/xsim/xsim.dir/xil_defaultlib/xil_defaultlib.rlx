@@ -1,0 +1,12 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/User/Desktop/final/project_3/project_3.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sim_1/imports/sim/top_tb.v,1733153936,verilog,,,,top_tb,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sim_1/new/memory_array_tb.v,1733151704,verilog,,,,memory_array_tb,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_rom.v,1733150611,verilog,,C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_test.v,,ascii_rom,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_test.v,1733198295,verilog,,C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/top.v,,ascii_test,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/top.v,1733153556,verilog,,C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/vga_controller.v,,top,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/vga_controller.v,1733150611,verilog,,C:/Users/User/Desktop/final/project_3/project_3.srcs/sim_1/imports/sim/top_tb.v,,vga_controller,,,,,,,,
+C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v,1733198189,verilog,,C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/top.v,,memory_array,,,,,,,,
