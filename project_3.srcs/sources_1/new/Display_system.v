@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Display_system(
-     input wire clk,        
+    input wire clk,        
     input wire btnC,   
     input wire btnU, 
     input wire [7:0] sw,                    

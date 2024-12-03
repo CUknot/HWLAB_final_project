@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Tue Dec  3 13:55:06 2024
+| Date             : Tue Dec  3 15:33:44 2024
 | Host             : Macbook-SE-M16-Pepper running 64-bit major release  (build 9200)
 | Command          : report_power -file Display_system_power_routed.rpt -pb Display_system_power_summary_routed.pb -rpx Display_system_power_routed.rpx
 | Design           : Display_system
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.100        |
+| Total On-Chip Power (W)  | 0.103        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.028        |
+| Dynamic (W)              | 0.031        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.5         |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |     3714 |       --- |             --- |
-|   LUT as Logic |     0.002 |     2239 |     20800 |           10.76 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.002 |     3622 |       --- |             --- |
+|   LUT as Logic |     0.002 |     2176 |     20800 |           10.46 |
+|   Register     |    <0.001 |     1187 |     41600 |            2.85 |
 |   CARRY4       |    <0.001 |       57 |      8150 |            0.70 |
-|   Register     |    <0.001 |     1180 |     41600 |            2.84 |
-|   F7/F8 Muxes  |    <0.001 |        7 |     32600 |            0.02 |
+|   F7/F8 Muxes  |    <0.001 |       16 |     32600 |            0.05 |
 |   Others       |     0.000 |       50 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |     0.003 |     2802 |       --- |             --- |
+| Signals        |     0.003 |     2695 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
-| I/O            |     0.018 |       39 |       106 |           36.79 |
+| I/O            |     0.021 |       39 |       106 |           36.79 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.100 |          |           |                 |
+| Total          |     0.103 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.010 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.019 |       0.009 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -143,7 +143,7 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| Display_system |     0.028 |
+| Display_system |     0.031 |
 |   at           |     0.006 |
 |     memory     |     0.005 |
 |     rom        |     0.001 |

@@ -36,9 +36,16 @@ module memory_array (
     assign data_out = memory_array[addr[6:5]][addr[4:0]]; // Use the top 2 bits for row and the bottom 5 for column
 
     // Process the data input and manage the memory write and row shifts
-    initial begin
-        // Declare integer variables outside the loop
-        for (i = 0; i < 4; i = i + 1) begin
+    
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+//            // Reset the memory to zero
+//            for (i = 0; i < 4; i = i + 1) begin
+//                for (j = 0; j < 32; j = j + 1) begin
+//                    memory_array[i][j] <= 7'b0;  // Clear all entries
+//                end
+//            end
+for (i = 0; i < 4; i = i + 1) begin
             for (j = 0; j < 32; j = j + 1) begin
                 // Store the string "KRERK PIROMSOPA"
                 if (i == 0) begin
@@ -66,18 +73,8 @@ module memory_array (
                 end
             end
         end
-    end
-    
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            // Reset the memory to zero
-            for (i = 0; i < 4; i = i + 1) begin
-                for (j = 0; j < 32; j = j + 1) begin
-                    memory_array[i][j] <= 7'b0;  // Clear all entries
-                end
-            end
             row <= 0;  // Reset cursor row
-            col <= 0;  // Reset cursor column
+            col <= 15;  // Reset cursor column
         end else begin
             if (data_ready && !data_in_progress) begin
                 data_in_progress <= 1;
@@ -103,16 +100,16 @@ module memory_array (
                             col <= 0;
                         end
                     end
-                    8'h08: begin
+                    8'h7F: begin
                         // Handle backspace
                         if (col > 0) begin
-                            col <= col - 1;
+                            col <= col - 2;
                             memory_array[row][col] <= 7'b0;  // Clear the last character
                         end else if (row > 0) begin
                             // Move to the previous row if backspace at column 0
                             row <= row - 1;
-                            for (c = 0; c < 32; c = c + 1) begin
-                                    if(memory_array[row][col] != 8'h00 ) col <= c ;
+                            for (c = 31; c > 0; c = c - 1) begin
+                                    if(memory_array[row + 1][col-1] != 8'h00 ) col <= c ;
                                 end  // Move to the last column of the previous row
                         end
                     end

@@ -45,7 +45,7 @@ module ascii_test(
     assign char_row = y[3:0];               // row number of ascii character rom
     assign bit_addr = x[2:0];               // column number of ascii character rom
     // "on" region in center of screen
-    assign ascii_bit_on = ((x >= 192 && x < 448) && (y >= 208 && y < 272)) ? ascii_bit : 1'b0;
+    assign ascii_bit_on = ((x >= 256 && x < 512) && (y >= 192 && y < 256)) ? ascii_bit : 1'b0;
     
     // rgb multiplexing circuit
     always @*
