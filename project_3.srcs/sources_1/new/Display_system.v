@@ -43,7 +43,7 @@ module Display_system(
     wire [6:0] num0, num1, num2, num3;
     wire btnU_singlepulser;
     wire [7:0] d,notd,d2,notd2,sw_singlepulser;
-    
+    assign reset = btnC;
     // Instantiate Clock Divider
     clk_divider clk_div_inst (
         .clk_in(clk),
@@ -149,13 +149,14 @@ module Display_system(
     wire [11:0] rgb_next;
     
     // VGA Controller
-    vga_controller vga(.clk_100MHz(clk), .reset(reset), .hsync(Hsync), .vsync(Vsync),
+    vga_controller vga(.clk_100MHz(clk), .reset(btnC), .hsync(Hsync), .vsync(Vsync),
                        .video_on(w_video_on), .p_tick(w_p_tick), .x(w_x), .y(w_y));
     // Text Generation Circuit
     ascii_test at(.clk(clk), .video_on(w_video_on), .x(w_x), .y(w_y),
      .tx_data(tx_utf8_data[7:0]),
      .tx_start(tx_start),
-     .rgb(rgb_next));
+     .rgb(rgb_next),
+     .reset(btnC));
     
     // rgb buffer
     always @(posedge clk)

@@ -10,8 +10,9 @@ module ascii_test(
     input clk,
     input video_on,
     input [9:0] x, y,
-    input [6:0] tx_data,
+    input [7:0] tx_data,
     input  tx_start,
+    input reset,
     output reg [11:0] rgb
     );
     
@@ -28,7 +29,7 @@ module ascii_test(
     ascii_rom rom(.clk(clk), .addr(rom_addr), .data(rom_data));
     memory_array memory(
     .clk(clk),
-    .reset(),
+    .reset(reset),
     .data_in(tx_data),      
     .data_ready(tx_start),        
     .addr({y[5:4],x[7:3]}),         
