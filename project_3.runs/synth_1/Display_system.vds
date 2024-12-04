@@ -3,28 +3,28 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Dec  4 14:59:55 2024
-# Process ID: 39568
-# Current directory: C:/Users/User/Desktop/final/project_3/project_3.runs/synth_1
+# Start of session at: Wed Dec  4 15:33:06 2024
+# Process ID: 17824
+# Current directory: C:/Users/User/Vivado/HWLAB_final_project/project_3.runs/synth_1
 # Command line: vivado.exe -log Display_system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Display_system.tcl
-# Log file: C:/Users/User/Desktop/final/project_3/project_3.runs/synth_1/Display_system.vds
-# Journal file: C:/Users/User/Desktop/final/project_3/project_3.runs/synth_1\vivado.jou
-# Running On        :Macbook-SE-M16-Pepper
+# Log file: C:/Users/User/Vivado/HWLAB_final_project/project_3.runs/synth_1/Display_system.vds
+# Journal file: C:/Users/User/Vivado/HWLAB_final_project/project_3.runs/synth_1\vivado.jou
+# Running On        :kittipat
 # Platform          :Windows Server 2016 or Windows 10
-# Operating System  :26100
-# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13980HX
-# CPU Frequency     :2419 MHz
-# CPU Physical cores:24
-# CPU Logical cores :32
-# Host memory       :16779 MB
-# Swap memory       :10737 MB
-# Total Virtual     :27516 MB
-# Available Virtual :7560 MB
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16931 MB
+# Swap memory       :4563 MB
+# Total Virtual     :21495 MB
+# Available Virtual :8646 MB
 #-----------------------------------------------------------
 source Display_system.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 566.250 ; gain = 235.070
-Command: read_checkpoint -auto_incremental -incremental C:/Users/User/Desktop/final/project_3/project_3.srcs/utils_1/imports/synth_1/Display_system.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/User/Desktop/final/project_3/project_3.srcs/utils_1/imports/synth_1/Display_system.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 552.223 ; gain = 223.258
+Command: read_checkpoint -auto_incremental -incremental C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/utils_1/imports/synth_1/Display_system.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/utils_1/imports/synth_1/Display_system.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Display_system -part xc7a35tcpg236-1
 Starting synth_design
@@ -36,112 +36,112 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 25268
+INFO: [Synth 8-7075] Helper process launched with PID 19288
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1417.020 ; gain = 449.156
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1406.184 ; gain = 448.676
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'reset', assumed default net type 'wire' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:46]
-INFO: [Synth 8-11241] undeclared symbol 'rx_ready_singlepulser', assumed default net type 'wire' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:71]
-INFO: [Synth 8-11241] undeclared symbol 'w_p_tick', assumed default net type 'wire' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:153]
-INFO: [Synth 8-11241] undeclared symbol 'reset', assumed default net type 'wire' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_system.v:67]
-INFO: [Synth 8-11241] undeclared symbol 'rx_ready_singlepulser', assumed default net type 'wire' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_system.v:69]
-INFO: [Synth 8-6157] synthesizing module 'Display_system' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:22]
-INFO: [Synth 8-6157] synthesizing module 'dFlipflop' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/dFilpflop.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'dFlipflop' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/dFilpflop.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_divider' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/clk_divider.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/clk_divider.v:1]
-INFO: [Synth 8-6157] synthesizing module 'divClock' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/divClock.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'divClock' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/divClock.v:22]
-INFO: [Synth 8-6157] synthesizing module 'single_pulse' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/single_pulse.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'single_pulse' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/single_pulse.v:22]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_tx.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_tx.v:1]
-INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_rx.v:1]
-WARNING: [Synth 8-6090] variable 'utf8_byte_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_rx.v:72]
-INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_rx.v:1]
-INFO: [Synth 8-6157] synthesizing module 'hexTo7Segment' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/hexTo7Segment.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'hexTo7Segment' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/hexTo7Segment.v:23]
-INFO: [Synth 8-6157] synthesizing module 'quadSevenSeg' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:23]
-WARNING: [Synth 8-567] referenced signal 'num0' should be on the sensitivity list [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
-WARNING: [Synth 8-567] referenced signal 'num1' should be on the sensitivity list [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
-WARNING: [Synth 8-567] referenced signal 'num2' should be on the sensitivity list [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
-WARNING: [Synth 8-567] referenced signal 'num3' should be on the sensitivity list [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'quadSevenSeg' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:23]
-WARNING: [Synth 8-689] width (7) of port connection 'num0' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:126]
-WARNING: [Synth 8-689] width (7) of port connection 'num1' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:127]
-WARNING: [Synth 8-689] width (7) of port connection 'num2' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:128]
-WARNING: [Synth 8-689] width (7) of port connection 'num3' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:129]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/vga_controller.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/vga_controller.v:21]
-INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_test.v:9]
-INFO: [Synth 8-6157] synthesizing module 'ascii_rom' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_rom.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'ascii_rom' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_rom.v:22]
-INFO: [Synth 8-6157] synthesizing module 'thai_rom' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/thai_rom.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/thai_rom.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'thai_rom' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/thai_rom.v:3]
-INFO: [Synth 8-6157] synthesizing module 'memory_array' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:22]
-WARNING: [Synth 8-6090] variable 'row' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:99]
-WARNING: [Synth 8-6090] variable 'col' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:100]
-WARNING: [Synth 8-6090] variable 'row' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:138]
-WARNING: [Synth 8-6090] variable 'col' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:139]
-INFO: [Synth 8-6155] done synthesizing module 'memory_array' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'display' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/ascii_test.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'Display_system' (0#1) [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v:22]
-WARNING: [Synth 8-7137] Register rx_data_reg in module uart_rx has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_rx.v:39]
-WARNING: [Synth 8-7137] Register data_in_progress_reg in module memory_array has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v:79]
+INFO: [Synth 8-11241] undeclared symbol 'reset', assumed default net type 'wire' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:51]
+INFO: [Synth 8-11241] undeclared symbol 'w_p_tick', assumed default net type 'wire' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:176]
+INFO: [Synth 8-11241] undeclared symbol 'reset', assumed default net type 'wire' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_system.v:67]
+INFO: [Synth 8-11241] undeclared symbol 'rx_ready_singlepulser', assumed default net type 'wire' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_system.v:69]
+INFO: [Synth 8-6157] synthesizing module 'Display_system' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:22]
+INFO: [Synth 8-6157] synthesizing module 'dFlipflop' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/dFilpflop.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dFlipflop' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/dFilpflop.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/clk_divider.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/clk_divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divClock' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/divClock.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'divClock' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/divClock.v:22]
+INFO: [Synth 8-6157] synthesizing module 'single_pulse' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/single_pulse.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'single_pulse' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/single_pulse.v:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_tx.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_rx.v:1]
+WARNING: [Synth 8-6090] variable 'utf8_byte_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_rx.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hexTo7Segment' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/hexTo7Segment.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hexTo7Segment' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/hexTo7Segment.v:23]
+INFO: [Synth 8-6157] synthesizing module 'quadSevenSeg' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:23]
+WARNING: [Synth 8-567] referenced signal 'num0' should be on the sensitivity list [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
+WARNING: [Synth 8-567] referenced signal 'num1' should be on the sensitivity list [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
+WARNING: [Synth 8-567] referenced signal 'num2' should be on the sensitivity list [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
+WARNING: [Synth 8-567] referenced signal 'num3' should be on the sensitivity list [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'quadSevenSeg' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/quadSevenSeg.v:23]
+WARNING: [Synth 8-689] width (7) of port connection 'num0' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:146]
+WARNING: [Synth 8-689] width (7) of port connection 'num1' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:147]
+WARNING: [Synth 8-689] width (7) of port connection 'num2' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:148]
+WARNING: [Synth 8-689] width (7) of port connection 'num3' does not match port width (8) of module 'quadSevenSeg' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:149]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/vga_controller.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/vga_controller.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/ascii_test.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ascii_rom' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/ascii_rom.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascii_rom' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/ascii_rom.v:22]
+INFO: [Synth 8-6157] synthesizing module 'thai_rom' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/thai_rom.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/thai_rom.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'thai_rom' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/thai_rom.v:3]
+INFO: [Synth 8-6157] synthesizing module 'memory_array' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:22]
+WARNING: [Synth 8-6090] variable 'row' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:99]
+WARNING: [Synth 8-6090] variable 'col' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:100]
+WARNING: [Synth 8-6090] variable 'row' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:138]
+WARNING: [Synth 8-6090] variable 'col' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'memory_array' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'display' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/ascii_test.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Display_system' (0#1) [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:22]
+WARNING: [Synth 8-7137] Register rx_data_reg in module uart_rx has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_rx.v:39]
+WARNING: [Synth 8-7137] Register data_in_progress_reg in module memory_array has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/memory.v:79]
 WARNING: [Synth 8-7129] Port num0[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num1[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num2[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num3[7] in module quadSevenSeg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port JB[2] in module Display_system is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1574.758 ; gain = 606.895
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1564.387 ; gain = 606.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1574.758 ; gain = 606.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1564.387 ; gain = 606.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1574.758 ; gain = 606.895
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1564.387 ; gain = 606.879
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1574.758 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1564.387 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/User/Desktop/final/project_3/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc]
-Finished Parsing XDC File [C:/Users/User/Desktop/final/project_3/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/User/Desktop/final/project_3/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Display_system_propImpl.xdc].
+Parsing XDC File [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc]
+Finished Parsing XDC File [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Display_system_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Display_system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1674.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.973 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1674.500 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1665.973 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.500 ; gain = 706.637
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.973 ; gain = 708.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.500 ; gain = 706.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.973 ; gain = 708.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.500 ; gain = 706.637
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1665.973 ; gain = 708.465
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/thai_rom.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/thai_rom.v:18]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1674.500 ; gain = 706.637
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1665.973 ; gain = 708.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -152,38 +152,38 @@ Detailed RTL Component Info :
 	   2 Input   18 Bit       Adders := 1     
 	   2 Input   14 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 5     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               28 Bit    Registers := 1     
-	               24 Bit    Registers := 67    
+	               24 Bit    Registers := 69    
 	               18 Bit    Registers := 1     
 	               14 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 5     
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 31    
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 36    
 +---ROMs : 
 	                    ROMs := 1     
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 11    
-	   2 Input   24 Bit        Muxes := 154   
+	   2 Input   24 Bit        Muxes := 161   
 	   4 Input   24 Bit        Muxes := 32    
 	   2 Input   12 Bit        Muxes := 2     
 	   2 Input   10 Bit        Muxes := 3     
-	   2 Input    8 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 6     
 	   4 Input    7 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 6     
 	   4 Input    4 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 11    
-	   2 Input    1 Bit        Muxes := 236   
-	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 22    
+	   2 Input    1 Bit        Muxes := 261   
+	   3 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -204,8 +204,9 @@ WARNING: [Synth 8-7129] Port num0[7] in module quadSevenSeg is either unconnecte
 WARNING: [Synth 8-7129] Port num1[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num2[7] in module quadSevenSeg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port num3[7] in module quadSevenSeg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port JB[2] in module Display_system is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.500 ; gain = 706.637
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1665.973 ; gain = 708.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -226,13 +227,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.500 ; gain = 706.637
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1665.973 ; gain = 708.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1749.496 ; gain = 781.633
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1717.383 ; gain = 759.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -240,7 +241,7 @@ Start Technology Mapping
 INFO: [Synth 8-7052] The timing for the instance cdisplay/rom1/addr_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance cdisplay/rom2/addr_reg_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -257,38 +258,39 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JB[0]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v:22]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -307,45 +309,45 @@ Report Cell Usage:
 |1     |BUFG     |     2|
 |2     |CARRY4   |    57|
 |3     |LUT1     |    67|
-|4     |LUT2     |   236|
-|5     |LUT3     |   110|
-|6     |LUT4     |  1529|
-|7     |LUT5     |   418|
-|8     |LUT6     |  1116|
+|4     |LUT2     |   240|
+|5     |LUT3     |   137|
+|6     |LUT4     |  1532|
+|7     |LUT5     |   447|
+|8     |LUT6     |  1124|
 |9     |MUXF7    |   154|
 |10    |MUXF8    |    10|
 |11    |RAMB18E1 |     2|
-|13    |FDCE     |  1687|
+|13    |FDCE     |  1730|
 |14    |FDPE     |    61|
-|15    |FDRE     |    97|
+|15    |FDRE     |   121|
 |16    |LD       |     8|
-|17    |IBUF     |    12|
-|18    |OBUF     |    27|
+|17    |IBUF     |    13|
+|18    |OBUF     |    28|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1736.492 ; gain = 778.984
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1768.227 ; gain = 700.621
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1768.227 ; gain = 800.363
+Synthesis finished with 0 errors, 1 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 1736.492 ; gain = 677.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1736.492 ; gain = 778.984
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1768.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1736.492 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 231 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'Display_system' is not ideal for floorplanning, since the cellview 'memory_array' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1768.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1736.492 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   LD => LDCE: 8 instances
 
-Synth Design complete | Checksum: 9ad01060
+Synth Design complete | Checksum: 22007e1e
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 27 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1768.227 ; gain = 1197.348
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1768.227 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Desktop/final/project_3/project_3.runs/synth_1/Display_system.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 1736.492 ; gain = 1179.637
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1736.492 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Vivado/HWLAB_final_project/project_3.runs/synth_1/Display_system.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Display_system_utilization_synth.rpt -pb Display_system_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 15:00:52 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 15:34:28 2024...

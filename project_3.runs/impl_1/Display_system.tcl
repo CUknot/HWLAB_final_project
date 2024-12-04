@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/User/Desktop/final/project_3/project_3.runs/impl_1/Display_system.tcl"
+  variable script "C:/Users/User/Vivado/HWLAB_final_project/project_3.runs/impl_1/Display_system.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -105,25 +104,23 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 8
-  set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 32  }
+  set_param chipscope.maxJobs 4
+  set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
-  set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/User/Desktop/final/project_3/project_3.cache/wt [current_project]
-  set_property parent.project_path C:/Users/User/Desktop/final/project_3/project_3.xpr [current_project]
-  set_property ip_output_repo C:/Users/User/Desktop/final/project_3/project_3.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/User/Vivado/HWLAB_final_project/project_3.cache/wt [current_project]
+  set_property parent.project_path C:/Users/User/Vivado/HWLAB_final_project/project_3.xpr [current_project]
+  set_property ip_output_repo C:/Users/User/Vivado/HWLAB_final_project/project_3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/User/Desktop/final/project_3/project_3.runs/synth_1/Display_system.dcp
+  add_files -quiet C:/Users/User/Vivado/HWLAB_final_project/project_3.runs/synth_1/Display_system.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/User/Desktop/final/project_3/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc
+  read_xdc C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/constrs_1/imports/constrs/uart_system.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
