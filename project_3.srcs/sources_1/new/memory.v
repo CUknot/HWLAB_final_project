@@ -22,18 +22,18 @@
 module memory_array (
     input wire clk,
     input wire reset,
-    input wire [6:0] data_in,      // 7-bit data to write
+    input wire [23:0] data_in,      // 7-bit data to write
     input wire data_ready,         // Signal to indicate data is ready
-    input wire [6:0] addr,         // 7-bit address (2 bits for row, 5 bits for column)
+    input wire [5:0] addr,         // 6-bit address (2 bits for row, 4 bits for column)
     output wire [6:0] data_out     // 7-bit data output from memory
 );
 
     // Memory array declaration: 4 buffers for 4 rows, each with 32 columns (total 128 locations)
-    reg [6:0] memory_array [3:0][31:0];  // 4 rows, each with 32 columns
+    reg [23:0] memory_array [3:0][15:0];  // 4 rows, each with 32 columns
     reg data_in_progress;               // Flag to track if data is currently being written
     integer i, j ,col ,row, c ,found;
     // Output logic: Reading data from the memory based on the address
-    assign data_out = memory_array[addr[6:5]][addr[4:0]]; // Use the top 2 bits for row and the bottom 5 for column
+    assign data_out = memory_array[addr[5:4]][addr[3:0]]; // Use the top 2 bits for row and the bottom 5 for column
 
     // Process the data input and manage the memory write and row shifts
     
@@ -46,7 +46,7 @@ module memory_array (
 //                end
 //            end
 for (i = 0; i < 4; i = i + 1) begin
-            for (j = 0; j < 32; j = j + 1) begin
+            for (j = 0; j < 16; j = j + 1) begin
                 // Store the string "KRERK PIROMSOPA"
                 if (i == 0) begin
                     case (j)
@@ -74,7 +74,7 @@ for (i = 0; i < 4; i = i + 1) begin
             end
         end
             row <= 0;  // Reset cursor row
-            col <= 15;  // Reset cursor column
+            col <= 14;  // Reset cursor column
         end else begin
             if (data_ready && !data_in_progress) begin
                 data_in_progress <= 1;
@@ -87,12 +87,12 @@ for (i = 0; i < 4; i = i + 1) begin
                         end else begin
                             // Shift lines up when at the last row
                             for (row = 1; row < 4; row = row + 1) begin
-                                for (col = 0; col < 32; col = col + 1) begin
+                                for (col = 0; col < 16; col = col + 1) begin
                                     memory_array[row - 1][col] <= memory_array[row][col];
                                 end
                             end
                             // Clear the last row
-                            for (col = 0; col < 32; col = col + 1) begin
+                            for (col = 0; col < 16; col = col + 1) begin
                                 memory_array[3][col] <= 7'b0;
                             end
                             // Keep the cursor at the last row and reset column
@@ -103,18 +103,19 @@ for (i = 0; i < 4; i = i + 1) begin
                     8'h7F: begin
                         // Handle backspace
                         if (col > 0) begin
-                            col <= col - 2;
-                            memory_array[row][col] <= 7'b0;  // Clear the last character
+                            col <= col - 1;
+                            memory_array[row][col - 1] <= 7'b0;  // Clear the last character
+                            
                         end else if (row > 0) begin
                             // Move to the previous row if backspace at column 0
                             row <= row - 1;
                             for (c = 31; c > 0; c = c - 1) begin
-                                    if(memory_array[row + 1][col-1] != 8'h00 ) col <= c ;
+                                    if(memory_array[row][col-1] != 8'h00 ) col <= c ;
                                 end  // Move to the last column of the previous row
                         end
                     end
                     default: begin
-                        if (col < 31) begin
+                        if (col < 16) begin
                             memory_array[row][col] <= data_in;  // Store the key code
                             col <= col + 1;  // Move to the next column
                         end else if (row < 3) begin
@@ -125,12 +126,12 @@ for (i = 0; i < 4; i = i + 1) begin
                         end
                         else begin
                                 for (row = 1; row < 4; row = row + 1) begin
-                                    for (col = 0; col < 32; col = col + 1) begin
+                                    for (col = 0; col < 16; col = col + 1) begin
                                         memory_array[row - 1][col] <= memory_array[row][col];
                                     end
                                 end
                                 // Clear the last row
-                                for (col = 0; col < 32; col = col + 1) begin
+                                for (col = 0; col < 16; col = col + 1) begin
                                     memory_array[3][col] <= 7'b0;
                                 end
                                 // Keep the cursor at the last row and reset column

@@ -44,6 +44,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val="digilentinc.com:basys3:part0:1.2"/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -169,6 +170,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/thai_rom.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/src/uart_rx.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../src/uart_rx.v"/>
@@ -205,18 +213,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/src/uart_system.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../src/uart_system.v"/>
-          <Attr Name="ImportTime" Val="1733150611"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/src/top.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../src/top.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -244,9 +241,9 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/sim/top_tb.v">
+      <File Path="$PSRCDIR/sim_1/imports/sim/clk_divider_tb.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../sim/top_tb.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim/clk_divider_tb.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -255,17 +252,6 @@
       </File>
       <File Path="$PSRCDIR/sim_1/new/memory_array_tb.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/sim/clk_divider_tb.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../sim/clk_divider_tb.v"/>
-          <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -273,7 +259,6 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/sim/uart_rx_tb.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../sim/uart_rx_tb.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -283,7 +268,6 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/sim/uart_system_tb.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../sim/uart_system_tb.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -293,7 +277,6 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/sim/uart_tx_tb.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../sim/uart_tx_tb.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -303,7 +286,6 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/sim/vga_controller_tb.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../sim/vga_controller_tb.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>

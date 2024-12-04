@@ -152,8 +152,8 @@ module Display_system(
     vga_controller vga(.clk_100MHz(clk), .reset(btnC), .hsync(Hsync), .vsync(Vsync),
                        .video_on(w_video_on), .p_tick(w_p_tick), .x(w_x), .y(w_y));
     // Text Generation Circuit
-    ascii_test at(.clk(clk), .video_on(w_video_on), .x(w_x), .y(w_y),
-     .tx_data(tx_utf8_data[7:0]),
+    display cdisplay(.clk(clk), .video_on(w_video_on), .x(w_x), .y(w_y),
+     .tx_data(tx_utf8_data),
      .tx_start(tx_start),
      .rgb(rgb_next),
      .reset(btnC));

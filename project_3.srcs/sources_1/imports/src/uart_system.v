@@ -35,8 +35,7 @@ module uart_system (
     wire clk_uart; // Baud rate clock (9600 Hz)
     wire clkDiv;
     reg [23:0] tx_utf8_data;  
-    wire [23:0] rx_utf8_data;     
-    wire [0:6] num0;
+    wire [23:0] rx_utf8_data;    
     reg tx_start;
     wire rx_ready;
     wire [6:0] num0, num1, num2, num3;

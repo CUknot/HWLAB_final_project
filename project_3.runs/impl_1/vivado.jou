@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Dec  3 15:32:51 2024
-# Process ID: 33920
+# Start of session at: Wed Dec  4 14:47:59 2024
+# Process ID: 33072
 # Current directory: C:/Users/User/Desktop/final/project_3/project_3.runs/impl_1
 # Command line: vivado.exe -log Display_system.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Display_system.tcl -notrace
 # Log file: C:/Users/User/Desktop/final/project_3/project_3.runs/impl_1/Display_system.vdi
@@ -19,6 +19,6 @@
 # Host memory       :16779 MB
 # Swap memory       :10737 MB
 # Total Virtual     :27516 MB
-# Available Virtual :6442 MB
+# Available Virtual :7833 MB
 #-----------------------------------------------------------
 source Display_system.tcl -notrace

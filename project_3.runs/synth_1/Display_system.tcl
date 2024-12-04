@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 8
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -83,10 +84,12 @@ read_verilog -library xil_defaultlib {
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/memory.v
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/quadSevenSeg.v
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/single_pulse.v
+  C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/thai_rom.v
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_rx.v
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_tx.v
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/vga_controller.v
   C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/new/Display_system.v
+  C:/Users/User/Desktop/final/project_3/project_3.srcs/sources_1/imports/src/uart_system.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
