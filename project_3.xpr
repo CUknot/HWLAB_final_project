@@ -102,6 +102,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/src/ascii_test.v">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../src/ascii_test.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -213,8 +214,16 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/src/uart_system.v">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../src/uart_system.v"/>
           <Attr Name="ImportTime" Val="1733150611"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/display.v">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

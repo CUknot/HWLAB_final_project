@@ -36,7 +36,7 @@ module Display_system(
     );
     
     
-    assign JB[0] = RsTx;//TX
+    assign JB[0] = 1;//TX
    
     wire clk_uart; // Baud rate clock (9600 Hz)
     wire clkDiv;
