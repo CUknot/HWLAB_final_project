@@ -25,7 +25,7 @@ module memory_array (
     input wire [23:0] data_in,      // 7-bit data to write
     input wire data_ready,         // Signal to indicate data is ready
     input wire [5:0] addr,         // 6-bit address (2 bits for row, 4 bits for column)
-    output wire [6:0] data_out     // 7-bit data output from memory
+    output wire [23:0] data_out     // 7-bit data output from memory
 );
 
     // Memory array declaration: 4 buffers for 4 rows, each with 32 columns (total 128 locations)

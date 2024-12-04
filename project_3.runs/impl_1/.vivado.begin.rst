@@ -43,3 +43,13 @@
     <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="16956" HostCore="32" HostMemory="016779538432">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="18464" HostCore="32" HostMemory="016779538432">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="User" Host="MACBOOK-SE-M16-" Pid="23260" HostCore="32" HostMemory="016779538432">
+    </Process>
+</ProcessHandle>

@@ -24,7 +24,7 @@ module display(
     wire [7:0] rom_dataA;            // 8-bit row data from text ROM
     wire [7:0] rom_dataT;            // 8-bit row data from text ROM
     wire ascii_bit, ascii_bit_on;     // ROM bit and status signal
-    wire [6:0] data_out;
+    wire [23:0] data_out;
     
     // instantiate ASCII ROM
     ascii_rom rom1(.clk(clk), .addr(rom_addr[10:0]), .data(rom_dataA));
@@ -41,7 +41,7 @@ module display(
     
     // ASCII ROM interface
     assign rom_addr = {ascii_char, char_row};   // ROM address is ascii code + row
-    assign ascii_bit = rom_dataT[~bit_addr] ;     // reverse bit order
+    assign ascii_bit = ascii_char[23:20] == 4'b1110 ?rom_dataT[~bit_addr]:rom_dataA[~bit_addr] ;     // reverse bit order
     
     assign ascii_char = data_out;   // 7-bit ascii code
 //    assign ascii_char = data_out;   // 7-bit ascii code

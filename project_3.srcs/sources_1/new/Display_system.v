@@ -24,15 +24,19 @@ module Display_system(
     input wire btnC,   
     input wire btnU, 
     input wire [7:0] sw,                    
-    input wire RsRx,             
+    input wire RsRx,
+    inout wire [2:0] JB,             
     output wire RsTx,
     output Hsync,       // to VGA connector
     output Vsync,       // to VGA connector
     output [11:0] rgb,   // to DAC, to VGA connector
     output [6:0] seg,      
     output dp,             
-    output [3:0]an   
+    output [3:0]an  
+     
     );
+    
+    
     
     wire clk_uart; // Baud rate clock (9600 Hz)
     wire clkDiv;
