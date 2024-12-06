@@ -36,7 +36,7 @@ module Display_system(
     );
     
     
-    assign JB[0] = 1;//TX
+    assign JB[0] = RsTx;//TX
    
     wire clk_uart; // Baud rate clock (9600 Hz)
     wire clkDiv;
@@ -139,7 +139,7 @@ module Display_system(
     );
     
     
-        quadSevenSeg display (
+        quadSevenSeg quadSevenSeg_inst (
         .seg(seg),
         .dp(dp),
         .an(an),
