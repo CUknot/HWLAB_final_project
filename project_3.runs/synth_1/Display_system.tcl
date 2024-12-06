@@ -74,7 +74,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/ascii_rom.v
-  C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/ascii_test.v
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/clk_divider.v
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/dFilpflop.v
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/divClock.v
@@ -87,7 +86,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_tx.v
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/vga_controller.v
   C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/Display_system.v
-  C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/imports/src/uart_system.v
+  C:/Users/User/Vivado/HWLAB_final_project/project_3.srcs/sources_1/new/display.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
