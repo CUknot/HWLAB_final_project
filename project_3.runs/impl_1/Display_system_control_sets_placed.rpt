@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Dec  6 16:29:06 2024
+| Date         : Mon Dec  9 10:16:31 2024
 | Host         : kittipat running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Display_system_control_sets_placed.rpt
 | Design       : Display_system
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    87 |
-|    Minimum number of control sets                        |    87 |
+| Total control sets                                       |    88 |
+|    Minimum number of control sets                        |    88 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    65 |
+| Unused register locations in slices containing registers |    56 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    87 |
-| >= 0 to < 4        |     2 |
+| Total control sets |    88 |
+| >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     4 |
 | >= 10 to < 12      |     2 |
-| >= 12 to < 14      |     2 |
+| >= 12 to < 14      |     3 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    75 |
+| >= 16              |    76 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,108 +58,109 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              60 |           26 |
-| No           | No                    | Yes                    |              94 |           31 |
+| No           | No                    | No                     |              61 |           31 |
+| No           | No                    | Yes                    |              99 |           35 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              68 |           14 |
-| Yes          | No                    | Yes                    |            1697 |          679 |
-| Yes          | Yes                   | No                     |              16 |            4 |
+| Yes          | No                    | No                     |              92 |           18 |
+| Yes          | No                    | Yes                    |            1708 |          687 |
+| Yes          | Yes                   | No                     |              16 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------+-------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
-|            Clock Signal            |                  Enable Signal                  |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------------------+-------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
-|  divClock_inst/CLK                 |                                                 |                                      |                1 |              2 |         2.00 |
-|  trigger_in_d_reg_i_1_n_0          | tx_inst/tx_busy_reg_n_0                         | btnC_IBUF                            |                1 |              2 |         2.00 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst2/bit_counter[3]_i_1__1_n_0              | btnC_IBUF                            |                1 |              4 |         4.00 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst/bit_counter[3]_i_1__0_n_0               | btnC_IBUF                            |                1 |              4 |         4.00 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst2/rx_shift_reg[7]_i_1__0_n_0             | btnC_IBUF                            |                2 |              8 |         4.00 |
-|  trigger_in_d_reg_i_1_n_0          | single_pulse_inst3/pulse_out_reg_0              |                                      |                2 |              8 |         4.00 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst/rx_shift_reg[7]_i_1_n_0                 | btnC_IBUF                            |                2 |              8 |         4.00 |
-|  cdisplay/rom2/data_reg[7]_i_2_n_0 |                                                 |                                      |                6 |              8 |         1.33 |
-|  vga/E[0]                          |                                                 | btnC_IBUF                            |                2 |             10 |         5.00 |
-|  vga/E[0]                          | vga/v_count_next_1                              | btnC_IBUF                            |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG                     | vga/E[0]                                        |                                      |                4 |             12 |         3.00 |
-|  trigger_in_d_reg_i_1_n_0          | tx_inst/tx_shift_reg                            | btnC_IBUF                            |                6 |             13 |         2.17 |
-|  trigger_in_d_reg_i_1_n_0          | single_pulse_inst3/pulse_out_reg_0              | single_pulse_inst3/btnU_singlepulser |                4 |             16 |         4.00 |
-|  trigger_in_d_reg_i_1_n_0          |                                                 |                                      |                4 |             17 |         4.25 |
-|  trigger_in_d_reg_i_1_n_0          |                                                 | btnC_IBUF                            |               10 |             19 |         1.90 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][0][23]_i_1_n_0  | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][12][23]_i_1_n_0 | btnC_IBUF                            |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][10][23]_i_1_n_0 | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][11][23]_i_1_n_0 | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][13][23]_i_1_n_0 | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][14][23]_i_1_n_0 | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][15][23]_i_1_n_0 | btnC_IBUF                            |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][5][23]_i_1_n_0  | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][6][23]_i_1_n_0  | btnC_IBUF                            |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][7][23]_i_1_n_0  | btnC_IBUF                            |                4 |             24 |         6.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][8][23]_i_1_n_0  | btnC_IBUF                            |                7 |             24 |         3.43 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][2][23]_i_1_n_0  | btnC_IBUF                            |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][3][23]_i_1_n_0  | btnC_IBUF                            |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][1][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][4][23]_i_1_n_0  | btnC_IBUF                            |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][9][23]_i_1_n_0  | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][13][23]_i_1_n_0 | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][14][23]_i_1_n_0 | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][3][23]_i_1_n_0  | btnC_IBUF                            |               14 |             24 |         1.71 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][0][23]_i_1_n_0  | btnC_IBUF                            |               15 |             24 |         1.60 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][11][23]_i_1_n_0 | btnC_IBUF                            |               13 |             24 |         1.85 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][10][23]_i_1_n_0 | btnC_IBUF                            |               13 |             24 |         1.85 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][14][23]_i_1_n_0 | btnC_IBUF                            |               13 |             24 |         1.85 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][12][23]_i_1_n_0 | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][13][23]_i_1_n_0 | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][15][23]_i_1_n_0 | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][1][23]_i_1_n_0  | btnC_IBUF                            |               14 |             24 |         1.71 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][2][23]_i_1_n_0  | btnC_IBUF                            |               13 |             24 |         1.85 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][12][23]_i_1_n_0 | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][4][23]_i_1_n_0  | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][5][23]_i_1_n_0  | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][6][23]_i_1_n_0  | btnC_IBUF                            |               11 |             24 |         2.18 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][8][23]_i_1_n_0  | btnC_IBUF                            |               11 |             24 |         2.18 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][7][23]_i_1_n_0  | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][9][23]_i_1_n_0  | btnC_IBUF                            |               15 |             24 |         1.60 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][0][23]_i_1_n_0  | btnC_IBUF                            |               11 |             24 |         2.18 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][10][23]_i_1_n_0 | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][11][23]_i_1_n_0 | btnC_IBUF                            |               11 |             24 |         2.18 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][14][23]_i_1_n_0 | btnC_IBUF                            |                8 |             24 |         3.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][13][23]_i_1_n_0 | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][1][23]_i_1_n_0  | btnC_IBUF                            |                8 |             24 |         3.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][15][23]_i_1_n_0 | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][2][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][3][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][6][23]_i_1_n_0  | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][5][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][4][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][7][23]_i_1_n_0  | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][8][23]_i_1_n_0  | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][9][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][10][23]_i_1_n_0 | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][11][23]_i_1_n_0 | btnC_IBUF                            |               13 |             24 |         1.85 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][12][23]_i_1_n_0 | btnC_IBUF                            |               11 |             24 |         2.18 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][1][23]_i_1_n_0  | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst2/rx_data[23]_i_1__0_n_0                 |                                      |                4 |             24 |         6.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][15][23]_i_1_n_0 | btnC_IBUF                            |               14 |             24 |         1.71 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][2][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][0][23]_i_1_n_0  | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][3][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][4][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][6][23]_i_1_n_0  | btnC_IBUF                            |               13 |             24 |         1.85 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][5][23]_i_1_n_0  | btnC_IBUF                            |               12 |             24 |         2.00 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst/rx_data[23]_i_1_n_0                     |                                      |                4 |             24 |         6.00 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][8][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][7][23]_i_1_n_0  | btnC_IBUF                            |                9 |             24 |         2.67 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst/utf8_buffer[23]_i_1_n_0                 | btnC_IBUF                            |                7 |             24 |         3.43 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][9][23]_i_1_n_0  | btnC_IBUF                            |               10 |             24 |         2.40 |
-|  trigger_in_d_reg_i_1_n_0          | rx_inst2/utf8_buffer[23]_i_1__0_n_0             | btnC_IBUF                            |                5 |             24 |         4.80 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/col[31]_i_1_n_0                 | btnC_IBUF                            |               17 |             32 |         1.88 |
-|  clk_IBUF_BUFG                     | cdisplay/memory/row[31]_i_1_n_0                 | btnC_IBUF                            |               15 |             32 |         2.13 |
-|  clk_IBUF_BUFG                     |                                                 |                                      |               15 |             33 |         2.20 |
-|  clk_IBUF_BUFG                     |                                                 | btnC_IBUF                            |               19 |             65 |         3.42 |
-+------------------------------------+-------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
++------------------------------------+-------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |                  Enable Signal                  |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+-------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  divClock_inst/CLK                 |                                                 |                                     |                1 |              2 |         2.00 |
+|  clk_uart_BUFG                     | rx_inst2/bit_counter[3]_i_1__2_n_0              | btnC_IBUF                           |                1 |              4 |         4.00 |
+|  clk_uart_BUFG                     | rx_inst/bit_counter[3]_i_1__1_n_0               | btnC_IBUF                           |                1 |              4 |         4.00 |
+|  clk_uart_BUFG                     | rx_inst/rx_shift_reg[7]_i_1_n_0                 | btnC_IBUF                           |                1 |              8 |         8.00 |
+|  clk_uart_BUFG                     | single_pulse_rx/pulse_out_reg_0[0]              |                                     |                2 |              8 |         4.00 |
+|  clk_uart_BUFG                     | rx_inst2/rx_shift_reg[7]_i_1__0_n_0             | btnC_IBUF                           |                2 |              8 |         4.00 |
+|  cdisplay/rom2/data_reg[7]_i_2_n_0 |                                                 |                                     |                5 |              8 |         1.60 |
+|  vga/CLK                           | vga/v_count_next                                | btnC_IBUF                           |                3 |             10 |         3.33 |
+|  vga/CLK                           |                                                 | btnC_IBUF                           |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                     | vga/CLK                                         |                                     |                3 |             12 |         4.00 |
+|  clk_uart_BUFG                     | tx_inst_JB/tx_shift_reg                         | btnC_IBUF                           |                7 |             13 |         1.86 |
+|  clk_uart_BUFG                     | tx_inst_RsRx/tx_shift_reg                       | btnC_IBUF                           |                7 |             13 |         1.86 |
+|  clk_uart_BUFG                     | single_pulse_rx/rx_ready_singlepulser           | single_pulse_btnU/btnU_singlepulser |                3 |             16 |         5.33 |
+|  clk_uart_BUFG                     |                                                 |                                     |                6 |             18 |         3.00 |
+|  clk_uart_BUFG                     |                                                 | btnC_IBUF                           |               13 |             24 |         1.85 |
+|  clk_uart_BUFG                     | rx_inst2/rx_data[23]_i_1__0_n_0                 |                                     |                3 |             24 |         8.00 |
+|  clk_uart_BUFG                     | rx_inst2/utf8_buffer[23]_i_1__0_n_0             | btnC_IBUF                           |                6 |             24 |         4.00 |
+|  clk_uart_BUFG                     | rx_inst/utf8_buffer[23]_i_1_n_0                 | btnC_IBUF                           |                7 |             24 |         3.43 |
+|  clk_uart_BUFG                     | rx_inst/rx_data[23]_i_1_n_0                     |                                     |                5 |             24 |         4.80 |
+|  clk_uart_BUFG                     | single_pulse_rx/E[0]                            |                                     |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][11][23]_i_1_n_0 | btnC_IBUF                           |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][10][23]_i_1_n_0 | btnC_IBUF                           |               14 |             24 |         1.71 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][0][23]_i_1_n_0  | btnC_IBUF                           |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][11][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][12][23]_i_1_n_0 | btnC_IBUF                           |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][14][23]_i_1_n_0 | btnC_IBUF                           |               14 |             24 |         1.71 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][13][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][1][23]_i_1_n_0  | btnC_IBUF                           |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][15][23]_i_1_n_0 | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][2][23]_i_1_n_0  | btnC_IBUF                           |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][3][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][4][23]_i_1_n_0  | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][5][23]_i_1_n_0  | btnC_IBUF                           |               12 |             24 |         2.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][6][23]_i_1_n_0  | btnC_IBUF                           |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][9][23]_i_1_n_0  | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][8][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[0][7][23]_i_1_n_0  | btnC_IBUF                           |               15 |             24 |         1.60 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][10][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][0][23]_i_1_n_0  | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][12][23]_i_1_n_0 | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][11][23]_i_1_n_0 | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][13][23]_i_1_n_0 | btnC_IBUF                           |               12 |             24 |         2.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][14][23]_i_1_n_0 | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][15][23]_i_1_n_0 | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][2][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][1][23]_i_1_n_0  | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][4][23]_i_1_n_0  | btnC_IBUF                           |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][3][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][6][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][7][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][5][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][9][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[1][8][23]_i_1_n_0  | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][10][23]_i_1_n_0 | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][0][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][11][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][13][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][12][23]_i_1_n_0 | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][14][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][15][23]_i_1_n_0 | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][1][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][2][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][3][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][4][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][5][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][6][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][9][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][8][23]_i_1_n_0  | btnC_IBUF                           |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][13][23]_i_1_n_0 | btnC_IBUF                           |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][10][23]_i_1_n_0 | btnC_IBUF                           |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][0][23]_i_1_n_0  | btnC_IBUF                           |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][15][23]_i_1_n_0 | btnC_IBUF                           |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][1][23]_i_1_n_0  | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][14][23]_i_1_n_0 | btnC_IBUF                           |               10 |             24 |         2.40 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][12][23]_i_1_n_0 | btnC_IBUF                           |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[2][7][23]_i_1_n_0  | btnC_IBUF                           |                9 |             24 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][3][23]_i_1_n_0  | btnC_IBUF                           |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][4][23]_i_1_n_0  | btnC_IBUF                           |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][7][23]_i_1_n_0  | btnC_IBUF                           |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][9][23]_i_1_n_0  | btnC_IBUF                           |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][8][23]_i_1_n_0  | btnC_IBUF                           |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][2][23]_i_1_n_0  | btnC_IBUF                           |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][5][23]_i_1_n_0  | btnC_IBUF                           |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/memory_array[3][6][23]_i_1_n_0  | btnC_IBUF                           |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/row[31]_i_1_n_0                 | btnC_IBUF                           |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                     | cdisplay/memory/col[31]_i_1_n_0                 | btnC_IBUF                           |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                     |                                                 |                                     |               19 |             33 |         1.74 |
+|  clk_IBUF_BUFG                     |                                                 | btnC_IBUF                           |               19 |             65 |         3.42 |
++------------------------------------+-------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 
